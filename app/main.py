@@ -48,7 +48,7 @@ async def sync_job():
     await schedule_mass_sync()
 
 # Schedule the job
-trigger = CronTrigger(minute='*/30')  # Run every 5 minutes
+trigger = CronTrigger(minute='*/30')  # Run every 30 minutes
 scheduler.add_job(sync_job, trigger, misfire_grace_time=600)
 
 asgi_handler = Mangum(app)
