@@ -1,6 +1,6 @@
 class Env:
     # Value should be enum["sandbox","production"]
-    environment = "production"
+    environment = "sandbox"
     admin_email = "carlog@mkthemedattractions.com.ph"
 
     EMAIL_SERVER = "smtp.gmail.com"
