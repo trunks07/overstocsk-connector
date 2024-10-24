@@ -1,0 +1,15 @@
+/app/__pycache__
+/app/routers/__pycache__
+/app/routers/webhooks/__pycache__
+/app/routers/callback/__pycache__
+/app/routers/middleware/__pycache__
+/app/libs/__pycache__
+/app/settings/__pycache__
+/app/services/__pycache__
+/app/traits/__pycache__
+/app/test/data/__pycache__
+/app/commands/__pycache__
+/app/models/__pycache__
+.venv
+/__pycache__
+function.zip
