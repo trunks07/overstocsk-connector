@@ -18,4 +18,6 @@ async def syncIventory():
         status_code = status.HTTP_400_BAD_REQUEST
         response = {"status": status_code, "error": e}
 
+    print(response)
+
     return JSONResponse(status_code=status_code, content=response)
