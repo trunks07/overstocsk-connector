@@ -1,11 +1,17 @@
+import os
+
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file
+load_dotenv()
 class Env:
     # Value should be enum["sandbox","production"]
-    environment = "sandbox"
-    admin_email = "carlog@mkthemedattractions.com.ph"
+    environment = os.getenv("ENVIRONMENT")
+    admin_email = os.getenv("ADMIN_EMAIL")
 
-    EMAIL_SERVER = "smtp.gmail.com"
-    EMAIL_PORT = 587
-    EMAIL_ADDRESS = "mkapideveloper@gmail.com"
-    EMAIL_PASSWORD = "piqiipknautfogsx"
+    EMAIL_SERVER = os.getenv("EMAIL_SERVER")
+    EMAIL_PORT = os.getenv("EMAIL_PORT")
+    EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+    EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
-    EBAY_INVENTORY_LIMITATION=True
+    EBAY_INVENTORY_LIMITATION=os.getenv("EBAY_INVENTORY_LIMITATION")
