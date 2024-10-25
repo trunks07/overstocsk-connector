@@ -3,7 +3,8 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables from the .env file
-load_dotenv()
+if os.getenv("AWS_EXECUTION_ENV") is None:
+    load_dotenv()
 class Env:
     # Value should be enum["sandbox","production"]
     environment = os.getenv("ENVIRONMENT")

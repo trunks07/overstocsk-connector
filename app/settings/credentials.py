@@ -2,8 +2,9 @@ import os
 
 from dotenv import load_dotenv
 
-# Load environment variables from the .env file
-load_dotenv()
+if os.getenv("AWS_EXECUTION_ENV") is None:
+    # Load environment variables from the .env file
+    load_dotenv()
 
 class Security:
     clientId = os.getenv("APP_CLIENT_ID")
