@@ -13,7 +13,7 @@ async def syncIventory():
         response = await OverstocksService.callSyncInventory()
 
         status_code = status.HTTP_200_OK
-        response = {"status": status_code, "data": response}
+        response = {"status": status_code, "data": response["data"]}
     except HTTPException  as e:
         status_code = status.HTTP_400_BAD_REQUEST
         response = {"status": status_code, "error": e}
