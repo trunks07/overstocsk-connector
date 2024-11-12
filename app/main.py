@@ -38,7 +38,8 @@ scheduler = AsyncIOScheduler()
 async def schedule_mass_sync():
     try:
         await asyncio.gather(
-            Overstocks.syncIventory()
+            Overstocks.syncIventory(),
+            Overstocks.syncSalesOrders()
         )
     except Exception as e:
         print(f"An error occurred during sync: {e}")

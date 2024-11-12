@@ -8,3 +8,10 @@ class OverstocksService:
         response = await Overstocks.GET(params)
 
         return response
+    
+    async def callSyncSalesOrders():
+        params = "/overstock/check-sync-sales-orders"
+
+        response = await Overstocks.GET(params)
+
+        return response
